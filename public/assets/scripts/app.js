@@ -3,15 +3,15 @@ window.onload = () => {
     fetch('http://localhost:3000/mates').then((resp) => loadClassMates(resp));
 }
 
-$('.page-link').on('click', async (e) => {
-    e.preventDefault()
-    const tab = Number(e.target.text.trim());
-    if(!isNaN(tab)){
-        console.log(tab)
-        //Get Page projects
-    }
-    // if(e.target.text)
-})
+// $('.page-link').on('click', async (e) => {
+//     e.preventDefault()
+//     const tab = Number(e.target.text.trim());
+//     if(!isNaN(tab)){
+//         console.log(tab)
+//         //Get Page projects
+//     }
+//     // if(e.target.text)
+// })
 
 function loadContent(data) {
     const url = data['repos_url'] + '?sort=updated';
