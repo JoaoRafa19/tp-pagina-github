@@ -1,0 +1,24 @@
+{
+    "mates": [
+        {
+            "name": "Yuri Zocoli",
+            "avatar": "http://localhost:3000/assets/img/yuri.jpg",
+            "github": "https://github.com/YuriZocoli"
+        },
+        {
+            "name": "Kaique dos Santos",
+            "avatar": "http://localhost:3000/assets/img/kaique.jpg",
+            "github": "https://github.com/iQuezin"
+        },
+        {
+            "name": "Christian Sena",
+            "github": "https://github.com/christiansenagomes",
+            "avatar": "http://localhost:3000/assets/img/christian.jpg"
+        },
+        {
+            "name": "Yalle Ramos",
+            "github": "https://github.com/ieiou",
+            "avatar": "http://localhost:3000/assets/img/yalle.jpg"
+        }
+    ]
+}

@@ -9,6 +9,11 @@
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="./assets/scripts/repo.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body class="container">
@@ -16,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid ">
                 <div class="align-self-start">
-                    <a class="navbar-brand me-auto" href="./index.html">SEU NOME</a>
+                    <a class="navbar-brand me-auto" href="./index.html">JoaoRafa19</a>
                 </div>
                 <div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,14 +30,12 @@
                     <div class="collapse navbar-collapse ms-auto" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="">LINK 1</a>
+                                <a class="nav-link active" aria-current="page" id="htmlurl" target="_blank" href="">Repositorio Github</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">LINK 2</a>
+                                <a class="nav-link active" aria-current="page" target="_blank" id="homepage" hidden href="">Visitar Site</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">LINK 3</a>
-                            </li>
+                            
 
                         </ul>
                     </div>
@@ -42,13 +45,15 @@
     </header>
     <main>
         <div class="container mt-4">
-            <h3>Repositório: Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <h3>Repositório: <span id="reponame">
+                </span></h3>
             <hr>
             <div class="container">
                 <h4 class="mt-4 text-primary">
                     Descrição
                 </h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tempore delectus numquam, laboriosam ipsum cupiditate et iure iusto dolorum, consequatur deserunt ipsa quaerat odit? Porro necessitatibus iste saepe sequi dicta?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi totam incidunt magni velit vel est, nemo consequatur distinctio tempore fugiat nostrum soluta odit? Rerum necessitatibus dolorem quo neque quia natus!Lorem
+                <span id="descricao">
+                </span>
             </div>
             <div class="row">
                 <div class="col">
@@ -56,41 +61,42 @@
                         <h5 class="mt-4 text-primary">
                             Data da criação
                         </h5>
-                        2024-04-01
+                        <span id="creation_date">
+                           
+                        </span>
                     </div>
                     <div class="container">
                         <h5 class="mt-4 text-primary">
                             Linguagem
                         </h5>
-                        JavaScript
+                        <div class="col">
+                            
+                            <span class="badge rounded-pill bg-secondary p-2" id="language">JavaScript</span>
+                        </div>
+
+
                     </div>
-                    <div class="container">
+                    <div class="container" id="topics">
                         <h5 class="mt-4 text-primary">
                             Tópicos
                         </h5>
-                        <span class="badge rounded-pill bg-primary p-2">JavaScript</span>
-                        <span class="badge rounded-pill bg-primary p-2">DevOps</span>
-                        <span class="badge rounded-pill bg-primary p-2">FrontEnd</span>
-                        <span class="badge rounded-pill bg-primary p-2">React</span>
-                        <span class="badge rounded-pill bg-primary p-2">ReactNative</span>
-    
                     </div>
                 </div>
                 <div class="col-1 mt-5">
                     <div>
                         <div class="row">
-                                <span class="h5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" style="color: blue;">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    2
-                                </span>
-                               <span class="h5">
+                            <span class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" style="color: blue;">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <span id="stars">1</span>
+                            </span>
+                            <span class="h5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: blue;">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
-                                2
-                               </span>
+                               <span id="watchers">1</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -99,7 +105,8 @@
         </div>
     </main>
     <footer>
-        <!-- place footer here -->
+
+
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

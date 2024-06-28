@@ -1,0 +1,13 @@
+hr {
+    color: black;
+    height: 5px;
+}
+
+
+#navigator{
+    display: flex;
+    /* /* width: auto; */
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 50px;
+}
