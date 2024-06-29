@@ -1,5 +1,12 @@
+import {Octokit} from 'https://esm.sh/octokit';
+
 window.onload = () => {
-    fetch("https://api.github.com/users/JoaoRafa19").then((response) => response.json().then(loadContent));
+    const octKit = new Octokit({});
+    octKit.request('GET /users/JoaoRafa19', {
+        headers: {
+            'X-GitHub-Api-Version':'2022-11-28'
+        }
+    }).then((response) => loadContent(response.data));
     fetch('http://localhost:3000/mates').then((resp) => loadClassMates(resp));
 
     fetch("http://localhost:3000/content")
