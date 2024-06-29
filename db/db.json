@@ -25,7 +25,7 @@
         {
             "id": 0,
             "type": "iframe",
-            "src": "https://www.youtube.com/embed/zEi62PpFezU?si=uYvb5IOeYaAsofob",
+            "src": "https://www.youtube.com/embed/rTcS0raY4F0?si=-rFv1FQYjrq2np-N",
             "title": "YouTube video player",
             "frameborder": "0",
             "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
@@ -34,7 +34,7 @@
         {
             "id": 1,
             "type": "iframe",
-            "src": "https://www.youtube.com/embed/LiOzTQAz13Q?si=4PalZC--rPNaRI_z",
+            "src": "https://www.youtube.com/embed/eCLthWcwC60?si=hEhKHuSbehmpM3_B",
             "title": "YouTube video player",
             "frameborder": "0",
             "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
@@ -42,24 +42,39 @@
         },
         {
             "id": 2,
-            "type": "a",
-            "href": "https://material.angular.io/components/categories",
-            "src": "https://i.imgur.com/Jk8b6Ks.png",
-            "alt": "Angular Material"
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/NZlIYr1slAk?si=YAdM5pBkqeB2OaY9",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
         },
         {
             "id": 3,
-            "type": "a",
-            "href": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
-            "src": "https://i.imgur.com/Xk1o0Pl.jpeg",
-            "alt": "Bootstrap"
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/Ejkb_YpuHWs?si=vR_Hizxygt6BMsd6",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
         },
         {
             "id": 4,
-            "type": "a",
-            "href": "https://www.oracle.com/br/technical-resources/articles/java/processing-streams-java-se-8.html",
-            "src": "https://i.imgur.com/igTdYQN.png",
-            "alt": "Java Stream"
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/rqvn_c2n9Eg?si=7fcbklZoc3hdnrMk",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
+        },
+        {
+            "id": 5,
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/epDCjksKMok?si=MIqM1xbvlCHvJ-gG",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
         }
     ]
 }
