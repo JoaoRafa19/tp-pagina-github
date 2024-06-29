@@ -2,23 +2,64 @@
     "mates": [
         {
             "name": "Yuri Zocoli",
-            "avatar": "http://localhost:3000/assets/img/yuri.jpg",
+            "avatar": "/assets/img/yuri.jpg",
             "github": "https://github.com/YuriZocoli"
         },
         {
             "name": "Kaique dos Santos",
-            "avatar": "http://localhost:3000/assets/img/kaique.jpg",
+            "avatar": "/assets/img/kaique.jpg",
             "github": "https://github.com/iQuezin"
         },
         {
             "name": "Christian Sena",
             "github": "https://github.com/christiansenagomes",
-            "avatar": "http://localhost:3000/assets/img/christian.jpg"
+            "avatar": "/assets/img/christian.jpg"
         },
         {
             "name": "Yalle Ramos",
             "github": "https://github.com/ieiou",
-            "avatar": "http://localhost:3000/assets/img/yalle.jpg"
+            "avatar": "/assets/img/yalle.jpg"
+        }
+    ],
+    "content": [
+        {
+            "id": 0,
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/zEi62PpFezU?si=uYvb5IOeYaAsofob",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
+        },
+        {
+            "id": 1,
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/LiOzTQAz13Q?si=4PalZC--rPNaRI_z",
+            "title": "YouTube video player",
+            "frameborder": "0",
+            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+            "referrerpolicy": "strict-origin-when-cross-origin"
+        },
+        {
+            "id": 2,
+            "type": "a",
+            "href": "https://material.angular.io/components/categories",
+            "src": "https://i.imgur.com/Jk8b6Ks.png",
+            "alt": "Angular Material"
+        },
+        {
+            "id": 3,
+            "type": "a",
+            "href": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+            "src": "https://i.imgur.com/Xk1o0Pl.jpeg",
+            "alt": "Bootstrap"
+        },
+        {
+            "id": 4,
+            "type": "a",
+            "href": "https://www.oracle.com/br/technical-resources/articles/java/processing-streams-java-se-8.html",
+            "src": "https://i.imgur.com/igTdYQN.png",
+            "alt": "Java Stream"
         }
     ]
 }

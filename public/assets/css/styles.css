@@ -3,6 +3,9 @@ hr {
     height: 5px;
 }
 
+/* iframe {
+    height: 500px;
+} */
 
 #navigator{
     display: flex;
@@ -10,4 +13,11 @@ hr {
     flex-direction: column;
     align-items: center; 
     margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#folowers {
 }

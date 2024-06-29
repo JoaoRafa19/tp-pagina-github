@@ -1,7 +1,73 @@
 window.onload = () => {
     fetch("https://api.github.com/users/JoaoRafa19").then((response) => response.json().then(loadContent));
     fetch('http://localhost:3000/mates').then((resp) => loadClassMates(resp));
+
+    fetch("http://localhost:3000/content")
+        .then((response) => response.json())
+        .then((json) => {
+            let sugestionIndicators = document.getElementById("sugestions-indicators");
+            let sugestionItens = document.getElementById("sugestions-itens");
+            let counter = 0;
+            json.forEach(item => {
+                let sugestionIndicator = document.createElement("button");
+                sugestionIndicator.setAttribute("type", "button");
+                sugestionIndicator.setAttribute("data-bs-target", "#carouselExampleIndicators")
+                sugestionIndicator.setAttribute("data-bs-slide-to", counter)
+                if (counter == 0) {
+                    sugestionIndicator.setAttribute("class", "active")
+                    sugestionIndicator.setAttribute("aria-current", "true")
+                }
+                sugestionIndicator.setAttribute("aria-label", "Slide " + (counter + 1))
+                sugestionIndicators.appendChild(sugestionIndicator)
+                let sugestionItem = document.createElement("div")
+                if (counter == 0) {
+                    sugestionItem.setAttribute("class", "carousel-item active")
+                } else {
+                    sugestionItem.setAttribute("class", "carousel-item")
+                }
+                if (item.type == "iframe") {
+                    let innerDiv = document.createElement("div");
+                    innerDiv.setAttribute("class", "ratio ratio-16x9")
+                    let iframe = createEmbededVideo(item);
+                    innerDiv.appendChild(iframe);
+                    sugestionItem.appendChild(innerDiv);
+                } else {
+                    let div = createEmbededLink(item);
+                    sugestionItem.appendChild(div);
+                }
+                sugestionItens.appendChild(sugestionItem);
+                counter += 1;
+            })
+        })
+
 }
+
+function createEmbededVideo(json) {
+    let iframe = document.createElement("iframe");
+    iframe.setAttribute("class", "w-100");
+    iframe.setAttribute("src", json.src);
+    iframe.setAttribute("title", json.title);
+    iframe.setAttribute("frameborder", json.frameborder);
+    iframe.setAttribute("allow", json.allow);
+    iframe.setAttribute(json.referrerpolicy, json.referrerpolicy)
+    iframe.allowFullscreen = true
+    return iframe;
+  }
+  
+  function createEmbededLink(json) {
+    let a = document.createElement("a");
+    a.setAttribute("href", json.href);
+    a.setAttribute("target", "_blank");
+    let img = document.createElement("img");
+    img.setAttribute("src", json.src);
+    // img.setAttribute("style", "max-height: 563px;");
+    img.setAttribute("class", "d-block w-100");
+    img.setAttribute("alt", json.alt);
+    a.appendChild(img)
+    return a;
+  }
+
+
 
 // $('.page-link').on('click', async (e) => {
 //     e.preventDefault()
@@ -16,10 +82,14 @@ window.onload = () => {
 function loadContent(data) {
     const url = data['repos_url'] + '?sort=updated';
     $('#folowers').text(data['followers']);
-    
+
+    $('#about').text(data.bio)
+    $('#location').text(data.location)
+
     fetch(url).then((res) => {
         res.json().then((reposdata) => {
             let nRepos = 0;
+            console.log(reposdata)
             for (let item of reposdata) {
                 if (item.description) {
                     createRepo(item);
@@ -39,7 +109,7 @@ function loadClassMates(data) {
             for (let mate of json) {
                 const element = `
                 <a href="${mate.github}" target="_blank" class="col  col-sm-6 col-xl-2 text-center">
-                    <img class="col" src="${mate.avatar}" alt="${mate.name}">
+                    <img class="col" src="https://imageserver-navy.vercel.app${mate.avatar}" alt="${mate.name}">
                     <p>${mate.name}</p>
                 </a>`
 
@@ -51,7 +121,7 @@ function loadClassMates(data) {
 }
 
 function createRepo(repository) {
-    if (repository.description) {
+    
         const element = `
         <div class="col col-xl-3 col-lg-4 col-md-5 col-10 align-self-center align-content-center">
                     <div class="card p-4 text-center">
@@ -83,5 +153,4 @@ function createRepo(repository) {
                 </div>
                     `;
         $("#repos").children('#reposrow').append(element)
-    }
 }
