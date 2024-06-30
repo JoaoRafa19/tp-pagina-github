@@ -1,3 +1,5 @@
+import {Octokit} from 'https://esm.sh/octokit';
+
 window.onload = async () => {
     const params = window.location.search
 
